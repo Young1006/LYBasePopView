@@ -1,0 +1,16 @@
+PODS:
+  - LYBasePopView (0.1.0)
+
+DEPENDENCIES:
+  - LYBasePopView (from `../`)
+
+EXTERNAL SOURCES:
+  LYBasePopView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LYBasePopView: 56368b5bc9c6668ae6e07da9eed5036ae055f933
+
+PODFILE CHECKSUM: 48b4657fd827d63cc891bf6a499d12eaed06fb5d
+
+COCOAPODS: 1.10.1

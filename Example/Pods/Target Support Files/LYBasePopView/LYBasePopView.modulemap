@@ -1,0 +1,6 @@
+framework module LYBasePopView {
+  umbrella header "LYBasePopView-umbrella.h"
+
+  export *
+  module * { export * }
+}

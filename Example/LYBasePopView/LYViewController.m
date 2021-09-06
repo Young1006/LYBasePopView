@@ -7,6 +7,7 @@
 //
 
 #import "LYViewController.h"
+#import "PopView.h"
 
 @interface LYViewController ()
 
@@ -20,10 +21,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch* touch = [touches anyObject];
+    if ([touch.view isDescendantOfView:[LYBasePopView overlayView]]) {
+
+    } else {
+        [self tapAction];
+    }
+}
+
+- (void)tapAction {
+    [PopView show:self.view clickBlock:^{
+        NSLog(@"点我啊~~");
+    }];
 }
 
 @end

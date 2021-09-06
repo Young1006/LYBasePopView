@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08789D1E26E63CDF003D9A9D /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08789D1D26E63CDF003D9A9D /* PopView.m */; };
 		27B107274B23DACA6AC138F1 /* Pods_LYBasePopView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E17C382A7B7359E423DCD /* Pods_LYBasePopView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -38,9 +39,11 @@
 
 /* Begin PBXFileReference section */
 		025939663CC9DA224984D339 /* Pods_LYBasePopView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYBasePopView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08789D1C26E63CDF003D9A9D /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
+		08789D1D26E63CDF003D9A9D /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
 		1C5F3BD18D7719D230537604 /* Pods-LYBasePopView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYBasePopView_Example.debug.xcconfig"; path = "Target Support Files/Pods-LYBasePopView_Example/Pods-LYBasePopView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EDC5AB8E44C77BA0C1D88B3 /* Pods-LYBasePopView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYBasePopView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LYBasePopView_Tests/Pods-LYBasePopView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		40286400FFC0D99B2778558A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		40286400FFC0D99B2778558A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		523E17C382A7B7359E423DCD /* Pods_LYBasePopView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYBasePopView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* LYBasePopView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYBasePopView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,9 +65,9 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		78A2530BF478355C079CB482 /* LYBasePopView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LYBasePopView.podspec; path = ../LYBasePopView.podspec; sourceTree = "<group>"; };
+		78A2530BF478355C079CB482 /* LYBasePopView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LYBasePopView.podspec; path = ../LYBasePopView.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9BE3B8F813EF80A384E3F012 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9BE3B8F813EF80A384E3F012 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A5D8F04A823A7B817BF48657 /* Pods-LYBasePopView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYBasePopView_Example.release.xcconfig"; path = "Target Support Files/Pods-LYBasePopView_Example/Pods-LYBasePopView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F3451A7FD41E7FB5D1182CBB /* Pods-LYBasePopView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYBasePopView_Tests.release.xcconfig"; path = "Target Support Files/Pods-LYBasePopView_Tests/Pods-LYBasePopView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* LYViewController.h */,
 				6003F5A6195388D20070C39A /* LYViewController.m */,
+				08789D1C26E63CDF003D9A9D /* PopView.h */,
+				08789D1D26E63CDF003D9A9D /* PopView.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,7 +198,6 @@
 				1EDC5AB8E44C77BA0C1D88B3 /* Pods-LYBasePopView_Tests.debug.xcconfig */,
 				F3451A7FD41E7FB5D1182CBB /* Pods-LYBasePopView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -366,6 +371,7 @@
 			files = (
 				6003F59E195388D20070C39A /* LYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* LYViewController.m in Sources */,
+				08789D1E26E63CDF003D9A9D /* PopView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
