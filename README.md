@@ -22,7 +22,7 @@ pod 'LYBasePopView'
 
 ## Author
 
-754515065@qq.com, appstore@qiyitianbao.com
+754515065@qq.com
 
 ## License
 
