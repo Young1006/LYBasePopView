@@ -23,11 +23,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UITouch* touch = [touches anyObject];
-    if ([touch.view isDescendantOfView:[LYBasePopView overlayView]]) {
-
-    } else {
+//    if ([touch.view isDescendantOfView:[LYBasePopView overlayView]]) {
+//
+//    } else {
         [self tapAction];
-    }
+//    }
 }
 
 - (void)tapAction {

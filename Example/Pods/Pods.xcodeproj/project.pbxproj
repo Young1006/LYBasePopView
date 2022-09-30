@@ -13,7 +13,6 @@
 		44A5294B927B37FAFEAC49D752D7CA60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		63FFFA19CC9630BA13D1BBFF89E5A443 /* LYBasePopView.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE23C8420E04780182C69B0FF673C84 /* LYBasePopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82EF7E2D142CB08B0683FD5D296273D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		AC646C1033C31C5995208480137DB4BD /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = C17384BDFF2101EBC9810B760B7E29D4 /* ReplaceMe.m */; };
 		D7018C524ECB1149C4BEEB65C522AC2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		DE65AC9A091A23ACE3A80587DC6A3B3D /* LYBasePopView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 545D87C149429B593327BFE2854D8A28 /* LYBasePopView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9C117177D44AA73262EEBF5E0E9539 /* Pods-LYBasePopView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB466D4A23114B17C0D687E83DB4088A /* Pods-LYBasePopView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,35 +44,34 @@
 		169CDA845CFED5E10E4EECEFA6577364 /* LYBasePopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LYBasePopView.debug.xcconfig; sourceTree = "<group>"; };
 		17417CFF162AF3E72D6CC522037ADA12 /* Pods-LYBasePopView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LYBasePopView_Tests-Info.plist"; sourceTree = "<group>"; };
 		26949D93163CFB3AABF4ED84BEAAA698 /* LYBasePopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LYBasePopView.release.xcconfig; sourceTree = "<group>"; };
-		2FAE76DF49BB18CB9E9D20624F70B86C /* LYBasePopView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LYBasePopView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2FAE76DF49BB18CB9E9D20624F70B86C /* LYBasePopView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LYBasePopView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3F147AE980151EF09B25BF730A021174 /* Pods-LYBasePopView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LYBasePopView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F2C584B5A1AA8D165CE821817D25EE2 /* Pods-LYBasePopView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LYBasePopView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3FAD64AF43FB0309C88C8DCA1E60379E /* Pods-LYBasePopView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LYBasePopView_Tests-dummy.m"; sourceTree = "<group>"; };
 		41D7E8639ABA55F7EABD7988AC820E0D /* LYBasePopView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LYBasePopView-prefix.pch"; sourceTree = "<group>"; };
 		545D87C149429B593327BFE2854D8A28 /* LYBasePopView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LYBasePopView-umbrella.h"; sourceTree = "<group>"; };
-		5BBE17E732E52F183F77C34E09BE8E35 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5BBE17E732E52F183F77C34E09BE8E35 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6A615C8234DAF7DA8344E74EB95BBDF4 /* Pods-LYBasePopView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LYBasePopView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		74197760740A78509216F8A7783181F3 /* Pods-LYBasePopView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LYBasePopView_Example-dummy.m"; sourceTree = "<group>"; };
 		834B812F43928C27C428C3104BB109EE /* Pods-LYBasePopView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LYBasePopView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		890F5FC7ABFDEB631D815AA50CCFE055 /* LYBasePopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LYBasePopView.framework; path = LYBasePopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890F5FC7ABFDEB631D815AA50CCFE055 /* LYBasePopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LYBasePopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		971D51D081BD716E1C0ED2D4450B855A /* Pods-LYBasePopView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LYBasePopView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		98D3EEE865D446DDD5E25BA399566296 /* LYBasePopView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LYBasePopView.modulemap; sourceTree = "<group>"; };
 		9906D0C242A742CC586F5D0D530E53C8 /* Pods-LYBasePopView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LYBasePopView_Example-Info.plist"; sourceTree = "<group>"; };
 		9A133C930BF533D24FFCE54A5198DF2B /* Pods-LYBasePopView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LYBasePopView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9A37F345B1EA1E34FD2F7273612CD489 /* Pods-LYBasePopView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LYBasePopView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A86A13626CC8C435F96869B4DCA15663 /* Pods-LYBasePopView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LYBasePopView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		AA9E0019C558FE31AC2D28B89B825428 /* Pods_LYBasePopView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LYBasePopView_Tests.framework; path = "Pods-LYBasePopView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9E0019C558FE31AC2D28B89B825428 /* Pods_LYBasePopView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYBasePopView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8DAB76F47CEAE1736800DB31EB311B /* LYBasePopView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LYBasePopView.m; path = LYBasePopView/Classes/LYBasePopView.m; sourceTree = "<group>"; };
 		ADE23C8420E04780182C69B0FF673C84 /* LYBasePopView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LYBasePopView.h; path = LYBasePopView/Classes/LYBasePopView.h; sourceTree = "<group>"; };
 		BB466D4A23114B17C0D687E83DB4088A /* Pods-LYBasePopView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LYBasePopView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C17384BDFF2101EBC9810B760B7E29D4 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = LYBasePopView/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DDBDFF29E35DAC151A7F5D285DA60722 /* Pods-LYBasePopView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LYBasePopView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E935F457ED61B46732AF487CF664FEAB /* LYBasePopView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LYBasePopView-Info.plist"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EAD0A06F59DB06D771473FC7B68782F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		EEC2B83964B40040213E89DDF84D2E8E /* Pods_LYBasePopView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LYBasePopView_Example.framework; path = "Pods-LYBasePopView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD0A06F59DB06D771473FC7B68782F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EEC2B83964B40040213E89DDF84D2E8E /* Pods_LYBasePopView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYBasePopView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9380CD4BC729B184FAA87887DF3A7A /* Pods-LYBasePopView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LYBasePopView_Example.modulemap"; sourceTree = "<group>"; };
 		F83738C44915C617DD6CA7E5334BF3E6 /* Pods-LYBasePopView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LYBasePopView_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 			children = (
 				ADE23C8420E04780182C69B0FF673C84 /* LYBasePopView.h */,
 				AB8DAB76F47CEAE1736800DB31EB311B /* LYBasePopView.m */,
-				C17384BDFF2101EBC9810B760B7E29D4 /* ReplaceMe.m */,
 				1FF646AA9D32F675E48693AC13B92A1D /* Pod */,
 				7B5B1619B260D4D0C9AD38A402D29F28 /* Support Files */,
 			);
@@ -380,7 +377,6 @@
 			files = (
 				29D9762B88D8B8A565EF6BE70DF859AA /* LYBasePopView-dummy.m in Sources */,
 				3018A86B6C570F513112A2639784BD3F /* LYBasePopView.m in Sources */,
-				AC646C1033C31C5995208480137DB4BD /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,8 +726,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

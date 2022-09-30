@@ -7,9 +7,6 @@
 
 #import "LYBasePopView.h"
 
-static LYBasePopView *_popView;
-static UIView *_backView;
-
 @interface LYBasePopView ()
 
 @property (nonatomic, strong) UIView *overlayView;
@@ -27,28 +24,28 @@ static UIView *_backView;
 @implementation LYBasePopView
 
 #pragma mark - 初始化
++ (instancetype)popView:(CGRect)frame {
+    return [[LYBasePopView alloc] initWithFrame:frame];
+}
+
++ (instancetype)popViewWithFrame:(CGRect)frame overlayView:(UIView *)overlayView {
+    return [[LYBasePopView alloc] initWithFrame:frame overlayView:overlayView];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     return [self initWithFrame:frame overlayView:nil];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame overlayView:(nullable UIView *)overlayView {
     if (self = [super initWithFrame:frame]) {
+        [self getRealOverlayView:overlayView];
         [self config];
-        self.overlayView = overlayView;
-        if (!self.overlayView) { self.overlayView = [self keyWindow]; }
         [self setupUI];
-        [self addPanGesture];
+        [self addPanGestureEventHandler];
     }
     return self;
 }
 
-+ (instancetype)popView {
-    return _popView;
-}
-
-+ (UIView *)overlayView {
-    return _backView;
-}
 
 #pragma mark - 基础配置
 - (void)config {
@@ -60,22 +57,27 @@ static UIView *_backView;
     self.moving = NO;
     self.hiddenForTouchEmpty = YES;
     self.shouldHideWhenDragging = YES;
+    self.panVelocity = 600;
     self.originPoint = CGPointMake(0, 0);
-    self.backgroundColor = [UIColor whiteColor];
+    self.contentBackgroundColor = UIColor.whiteColor;
+}
+
+- (void)getRealOverlayView:(nullable UIView *)view {
+    self.overlayView = view ?: [self keyWindow];
 }
 
 #pragma mark - UI
 - (void)setupUI {
     if (!self.overlayView) {
-        NSAssert(self.overlayView != nil, @"The overlayView is can't be nil.");
+        NSAssert(self.overlayView != nil, @"The overlayView of popView is can't be nil.");
         return;
     }
     
-    _popView = self;
+//    _popView = self;
     
     [self.overlayView addSubview:self.backgroundView];
     [self.overlayView bringSubviewToFront:self.backgroundView];
-    _backView = self.backgroundView;
+//    _backView = self.backgroundView;
     
     [self.backgroundView addSubview:self.touchView];
     
@@ -88,7 +90,7 @@ static UIView *_backView;
 }
 
 #pragma mark - 添加手势
-- (void)addPanGesture {
+- (void)addPanGestureEventHandler {
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureAction:)];
     [self addGestureRecognizer:panGesture];
 }
@@ -103,9 +105,6 @@ static UIView *_backView;
     CGFloat height = panView.frame.size.height;
     CGPoint point = [gesture translationInView:self.overlayView];
     switch (gesture.state) {
-        case UIGestureRecognizerStateBegan:
-
-            break;
         case UIGestureRecognizerStateChanged: // 只能向相反方向运动
         {
             //NSLog(@"point.y ========== %.2f",point.y);
@@ -138,12 +137,13 @@ static UIView *_backView;
             break;
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
         {
             CGPoint speed = [gesture velocityInView:gesture.view];
             //NSLog(@"spped ==== %@",NSStringFromCGPoint(speed));
             switch (self.direction) {
                 case LYBasePopViewAnimationDirectionBottom:
-                    if (speed.y >= 600) {
+                    if (speed.y >= self.panVelocity) {
                         [self popViewHide];
                     } else {
                         if (origin.y > self.originPoint.y + height / 2.0) {
@@ -154,7 +154,7 @@ static UIView *_backView;
                     }
                     break;
                 case LYBasePopViewAnimationDirectionTop:
-                    if (speed.y <= -600) {
+                    if (speed.y <= -self.panVelocity) {
                         [self popViewHide];
                     } else {
                         if (origin.y < self.originPoint.y - height / 2.0) {
@@ -165,7 +165,7 @@ static UIView *_backView;
                     }
                     break;
                 case LYBasePopViewAnimationDirectionLeft:
-                    if (speed.x <= -600) {
+                    if (speed.x <= -self.panVelocity) {
                         [self popViewHide];
                     } else {
                         if (origin.x < self.originPoint.x - width / 2.0) {
@@ -176,7 +176,7 @@ static UIView *_backView;
                     }
                     break;
                 case LYBasePopViewAnimationDirectionRight:
-                    if (speed.x >= 600) {
+                    if (speed.x >= self.panVelocity) {
                         [self popViewHide];
                     } else {
                         if (origin.x > self.originPoint.x - width / 2.0) {
@@ -254,7 +254,7 @@ static UIView *_backView;
         [self afterHideAction];
         return;
     }
-    [UIView animateWithDuration:self.animationTime  delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:self.animationTime  delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         [self hideAction];
     } completion:^(BOOL finished) {
         self.originPoint = CGPointMake(0, 0);
@@ -357,10 +357,12 @@ static UIView *_backView;
     [self popViewHide];
 }
 
+
 #pragma mark - 生命周期
 - (void)popViewWillAppear {
     self.moving = YES;
     [self setCornerRadius];
+    self.layer.backgroundColor = self.contentBackgroundColor.CGColor;
     if (!self.backgroundView.superview) {
         [self.overlayView addSubview:self.backgroundView];
     }
@@ -384,7 +386,8 @@ static UIView *_backView;
     self.moving = NO;
 }
 
-#pragma mark - keyWindow
+
+#pragma mark - getter
 - (nullable UIWindow *)keyWindow {
     if (@available(iOS 13.0, *)) {
         for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
@@ -398,7 +401,7 @@ static UIView *_backView;
             }
         }
     } else {
-        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        UIWindow *keyWindow = [[UIApplication sharedApplication].windows lastObject];
         if (!keyWindow) {
             keyWindow = [UIApplication sharedApplication].keyWindow;
         }

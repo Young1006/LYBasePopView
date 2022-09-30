@@ -17,10 +17,14 @@ typedef NS_ENUM(NSInteger, LYBasePopViewAnimationDirection) {
     LYBasePopViewAnimationDirectionCenter,           // 中间弹出
 };
 
+
 @interface LYBasePopView : UIView
 
 /// 弹窗载体背景颜色alpha值（默认值0.15）
 @property (nonatomic, assign) CGFloat colorAlpha;
+
+/// 弹框内容背景颜色
+@property (nonatomic, strong) UIColor *contentBackgroundColor;
 
 /// 弹窗圆角（默认10.0）
 @property (nonatomic, assign) CGFloat radius;
@@ -40,16 +44,14 @@ typedef NS_ENUM(NSInteger, LYBasePopViewAnimationDirection) {
 /// 是否支持拖拽关闭弹窗（默认YES, 不支持LYBasePopViewAnimationDirectionCenter）
 @property (nonatomic, assign, getter=isShouldHideWhenDragging) BOOL shouldHideWhenDragging;
 
+/// 弹框消平移位置未达到弹框一半时消失要求达到的速率 默认600
+@property (nonatomic, assign) CGFloat panVelocity;
 
 
 /// 初始化（overlayView为nil时，自动获取keyWindow）
++ (instancetype)popView:(CGRect)frame;
++ (instancetype)popViewWithFrame:(CGRect)frame overlayView:(nullable UIView *)overlayView;
 - (instancetype)initWithFrame:(CGRect)frame overlayView:(nullable UIView *)overlayView;
-
-/// 返回自己
-+ (instancetype)popView;
-
-/// 返回载体view
-+ (UIView *)overlayView;
 
 /// 弹窗将要显示
 - (void)popViewWillAppear NS_REQUIRES_SUPER;
