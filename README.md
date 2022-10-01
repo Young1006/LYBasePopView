@@ -13,7 +13,7 @@ LYBasePopView is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LYBasePopView'
+pod 'LYBasePopView', :git => "https://github.com/Young1006/LYBasePopView.git", :tag => "0.2.0"
 ```
 ## 简单使用
 PopView *pop = [[PopView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 400) overlayView:inView]; </br>
